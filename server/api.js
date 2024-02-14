@@ -6,7 +6,7 @@ var cors = require("cors");
 var connectionString = "mongodb://127.0.0.1:27017";
 
 var app = express();
-app.use(cors());
+app.use(cors({ origin: true }));
 app.use(express.urlencoded({extended:true}));
 app.use(express.json());
 
